@@ -10,12 +10,92 @@ Comment Out Code Command + /
     <meta charset="utf-8" />
     <title>Unit 4 - Flexbox</title>
     <style>
- 
+      .tiger {
+        display: flex;
+        justify-content: space-around;
+        padding: 30px;
+        align-items: center;
+        background-image: url(https://wallpapers.com/images/featured/picture-en3dnh2zi84sgt3t.jpg);
+      }
+
+      p {
+        background-color: blue;
+      color:white;
+      font-family:tahoma;
+      }
+
+      img {
+        margin-right: 20px;
+      }
+      
+      .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 100px;
+        margin:auto;
+        width: 40%;
+      }
+      
+      .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;}
+      
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);}
+      
+      .flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+      
+      .flip-card-front {
+  background-color: #bbb;
+        color: black;}
+      
+      .flip-card-back {
+  background-image: url(https://static.vecteezy.com/system/resources/thumbnails/009/273/280/small_2x/concept-of-loneliness-and-disappointment-in-love-sad-man-sitting-element-of-the-picture-is-decorated-by-nasa-free-photo.jpg);
+  color: white;
+  transform: rotateY(180deg);
+        width:300px;height:300px;
+}
     </style>
   </head>
   <body>
     <h1>Jungle Animals</h1>
 
-   
+    <div class="tiger">
+      <img
+        src="https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small_2x/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg"
+      />
+
+      <p>
+        tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger
+        tiger tiger tiger tiger tiger
+      </p>
+      
+      
+    </div>
+    
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://download.cdn-shop.com/media/web_images/cd/structured-data/framed-picture-1x1.jpg" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>tiger</p>
+      <p>tiger</p>
+    </div>
+  </div>
+</div>
   </body>
 </html>
